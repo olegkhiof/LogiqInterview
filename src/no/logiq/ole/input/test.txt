@@ -1,0 +1,11 @@
+<PALINDROME>:<bob>
+<WHITESPACE>:<hello world>
+<REVERSE>:<logiq>
+<UNIQUE_COUNT>:<good>
+<CAPITALIZE>:<funny>
+<PALINDROME>:<foo>
+<WHITESPACE>:<bar>
+<REVERSE>:<foo>
+<UNIQUE_COUNT>:<bar>
+<CAPITALIZE>:<Foo>
+<EXPLODE>:<bar>
