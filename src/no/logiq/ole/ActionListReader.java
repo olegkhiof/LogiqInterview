@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 class ActionListReader {
 
-
     protected ArrayList<Action> actionListReader(File actionListFile){
+        //initialize ArrayLists
         ArrayList<String> actionStringArrayList = new ArrayList<>();
         ArrayList<Action> actions = new ArrayList<>();
         int i = 0;
@@ -21,9 +21,9 @@ class ActionListReader {
             while(scanner.hasNextLine());
         }
         catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
-
+        //splits each element by delimiter ":" and creates action objects out of the substrings.
         for(i = 0; i<actionStringArrayList.size(); i++){
             String[] singularAction = actionStringArrayList.get(i).split(":");
             Action action = new Action(singularAction[0], singularAction[1]);

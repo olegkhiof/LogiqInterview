@@ -6,14 +6,13 @@ public class Action {
     private String action;
     private String text;
     private String resultString;
-    private boolean resultBoolean;
 
     protected Action(String action, String text) {
         this.action = action;
         this.text = text;
         formatString();
     }
-
+    //formats the string
     private void formatString() {
     text =text.replace("<","");
     text =text.replace(">","");
@@ -52,12 +51,8 @@ public class Action {
 
 
     private void palindrome(String text){
-        if(text.equals(reverse(text))){
-            resultBoolean = true;
-        }
-        else{
-            resultBoolean = false;
-        }
+        boolean resultBoolean;
+        resultBoolean = text.equals(reverse(text));
         resultString = Boolean.toString(resultBoolean);
     }
 
@@ -66,7 +61,7 @@ public class Action {
     }
 
     private String reverse(String text){
-        //reverses the text using stringbuilder
+        //reverses the text using StringBuilder
         resultString = new StringBuilder(text).reverse().toString();
         return resultString;
     }
@@ -87,11 +82,10 @@ public class Action {
         resultString = text.substring(0, 1).toUpperCase() + text.substring(1).toLowerCase();
     }
 
-    //overrrides default toString, for debugging.
+    //overrides default toString, for debugging.
     @Override
     public String toString(){
-        String actionString =  action + ":" + text;
-        return actionString;
+        return action + ":" + text;
     }
 
     public String getAction() {
